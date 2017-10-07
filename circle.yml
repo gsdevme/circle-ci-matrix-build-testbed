@@ -1,0 +1,27 @@
+version: 2
+jobs:
+  php70:
+    working_directory: ~/home
+    docker:
+      - image: php:7.0-cli
+    steps:
+      - checkout
+      - run:
+          name: "Run something.php"
+          command: 'php something.php'
+
+  php71:
+    docker:
+      - image: php:7.1-cli
+    steps:
+      - checkout
+      - run:
+          name: "Run something.php"
+          command: 'php something.php'
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - php70
+      - php71
