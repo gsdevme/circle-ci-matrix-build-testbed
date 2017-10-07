@@ -1,4 +1,5 @@
 version: 2
+
 jobs:
   php70:
     working_directory: ~/home
@@ -23,5 +24,5 @@ workflows:
   version: 2
   build:
     jobs:
-      - php70
-      - php71
+      - "php70"
+      - "php71"
