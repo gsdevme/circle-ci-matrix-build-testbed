@@ -24,11 +24,15 @@ workflows:
   version: 2
   build:
     jobs:
-      php70:
-        environment: "2.8" # PHP 7.0 with Env Symfony 2.8
-      php70:
-        environment: "3.0" # PHP 7.0 with Env Symfony 3.0
-      php71:
-        environment: "2.8" # PHP 7.1 with Env Symfony 2.8
-      php71:
-        environment: "3.0" # PHP 7.1 with Env Symfony 3.0
+      - php70:
+          name: "php70-Symfony28"
+          environment: "2.8"
+      - php70:
+          name: "php70-Symfony30"
+          environment: "3.0"
+      - php71:
+          name: "php71-Symfony28"
+          environment: "2.8"
+      - php71:
+          name: "php71-Symfony30"
+          environment: "3.0"
